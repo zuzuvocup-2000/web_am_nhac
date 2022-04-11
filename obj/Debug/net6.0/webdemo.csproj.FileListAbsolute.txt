@@ -1,0 +1,199 @@
+C:\Users\Admin\Desktop\webdemo\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\Admin\Desktop\webdemo\bin\Debug\net6.0\appsettings.json
+C:\Users\Admin\Desktop\webdemo\bin\Debug\net6.0\webdemo.staticwebassets.runtime.json
+C:\Users\Admin\Desktop\webdemo\bin\Debug\net6.0\webdemo.exe
+C:\Users\Admin\Desktop\webdemo\bin\Debug\net6.0\webdemo.deps.json
+C:\Users\Admin\Desktop\webdemo\bin\Debug\net6.0\webdemo.runtimeconfig.json
+C:\Users\Admin\Desktop\webdemo\bin\Debug\net6.0\webdemo.dll
+C:\Users\Admin\Desktop\webdemo\bin\Debug\net6.0\webdemo.pdb
+C:\Users\Admin\Desktop\webdemo\obj\Debug\net6.0\webdemo.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\webdemo\obj\Debug\net6.0\webdemo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\Desktop\webdemo\obj\Debug\net6.0\webdemo.AssemblyInfoInputs.cache
+C:\Users\Admin\Desktop\webdemo\obj\Debug\net6.0\webdemo.AssemblyInfo.cs
+C:\Users\Admin\Desktop\webdemo\obj\Debug\net6.0\webdemo.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\webdemo\obj\Debug\net6.0\webdemo.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Admin\Desktop\webdemo\obj\Debug\net6.0\webdemo.RazorAssemblyInfo.cache
+C:\Users\Admin\Desktop\webdemo\obj\Debug\net6.0\webdemo.RazorAssemblyInfo.cs
+C:\Users\Admin\Desktop\webdemo\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\Admin\Desktop\webdemo\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\Admin\Desktop\webdemo\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\Admin\Desktop\webdemo\obj\Debug\net6.0\scopedcss\bundle\webdemo.styles.css
+C:\Users\Admin\Desktop\webdemo\obj\Debug\net6.0\scopedcss\projectbundle\webdemo.bundle.scp.css
+C:\Users\Admin\Desktop\webdemo\obj\Debug\net6.0\webdemo.dll
+C:\Users\Admin\Desktop\webdemo\obj\Debug\net6.0\refint\webdemo.dll
+C:\Users\Admin\Desktop\webdemo\obj\Debug\net6.0\webdemo.pdb
+C:\Users\Admin\Desktop\webdemo\obj\Debug\net6.0\webdemo.genruntimeconfig.cache
+C:\Users\Admin\Desktop\webdemo\obj\Debug\net6.0\ref\webdemo.dll
+C:\Users\Admin\Desktop\webdemo\bin\Debug\net6.0\BouncyCastle.Crypto.dll
+C:\Users\Admin\Desktop\webdemo\bin\Debug\net6.0\Google.Protobuf.dll
+C:\Users\Admin\Desktop\webdemo\bin\Debug\net6.0\K4os.Compression.LZ4.dll
+C:\Users\Admin\Desktop\webdemo\bin\Debug\net6.0\K4os.Compression.LZ4.Streams.dll
+C:\Users\Admin\Desktop\webdemo\bin\Debug\net6.0\K4os.Hash.xxHash.dll
+C:\Users\Admin\Desktop\webdemo\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\Admin\Desktop\webdemo\bin\Debug\net6.0\MySql.Data.dll
+C:\Users\Admin\Desktop\webdemo\bin\Debug\net6.0\Ubiety.Dns.Core.dll
+C:\Users\Admin\Desktop\webdemo\bin\Debug\net6.0\ZstdNet.dll
+C:\Users\Admin\Desktop\webdemo\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+C:\Users\Admin\Desktop\webdemo\bin\Debug\net6.0\System.Data.SqlClient.dll
+C:\Users\Admin\Desktop\webdemo\bin\Debug\net6.0\System.Drawing.Common.dll
+C:\Users\Admin\Desktop\webdemo\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Admin\Desktop\webdemo\bin\Debug\net6.0\System.Security.Permissions.dll
+C:\Users\Admin\Desktop\webdemo\bin\Debug\net6.0\System.Windows.Extensions.dll
+C:\Users\Admin\Desktop\webdemo\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\Admin\Desktop\webdemo\bin\Debug\net6.0\runtimes\win-arm64\native\sni.dll
+C:\Users\Admin\Desktop\webdemo\bin\Debug\net6.0\runtimes\win-x64\native\sni.dll
+C:\Users\Admin\Desktop\webdemo\bin\Debug\net6.0\runtimes\win-x86\native\sni.dll
+C:\Users\Admin\Desktop\webdemo\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Admin\Desktop\webdemo\bin\Debug\net6.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Admin\Desktop\webdemo\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\Admin\Desktop\webdemo\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\Admin\Desktop\webdemo\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Admin\Desktop\webdemo\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+C:\Users\Admin\Desktop\webdemo\obj\Debug\net6.0\webdemo.csproj.CopyComplete
+C:\Users\Admin\Desktop\webdemo\bin\Debug\net6.0\Humanizer.dll
+C:\Users\Admin\Desktop\webdemo\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\Admin\Desktop\webdemo\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Admin\Desktop\webdemo\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\Admin\Desktop\webdemo\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\Admin\Desktop\webdemo\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\Admin\Desktop\webdemo\bin\Debug\net6.0\MySql.EntityFrameworkCore.dll
+C:\Users\Admin\Desktop\webdemo\bin\Debug\net6.0\MySqlConnector.dll
+C:\Users\Admin\Desktop\webdemo\bin\Debug\net6.0\Pomelo.EntityFrameworkCore.MySql.dll
+C:\Users\Admin\Desktop\webdemo\bin\Debug\net6.0\DotNet.Cookies.dll
+c:\Users\Admin\Desktop\webdemo\bin\Debug\net6.0\EntityFramework.SqlServer.dll
+c:\Users\Admin\Desktop\webdemo\bin\Debug\net6.0\EntityFramework.dll
+c:\Users\Admin\Desktop\webdemo\bin\Debug\net6.0\MySql.Data.EntityFramework.dll
+c:\Users\Admin\Desktop\webdemo\bin\Debug\net6.0\System.CodeDom.dll
+C:\Users\Admin\Desktop\Dự án trên lớp\webdemo\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\Admin\Desktop\Dự án trên lớp\webdemo\bin\Debug\net6.0\appsettings.json
+C:\Users\Admin\Desktop\Dự án trên lớp\webdemo\bin\Debug\net6.0\webdemo.staticwebassets.runtime.json
+C:\Users\Admin\Desktop\Dự án trên lớp\webdemo\bin\Debug\net6.0\webdemo.exe
+C:\Users\Admin\Desktop\Dự án trên lớp\webdemo\bin\Debug\net6.0\webdemo.deps.json
+C:\Users\Admin\Desktop\Dự án trên lớp\webdemo\bin\Debug\net6.0\webdemo.runtimeconfig.json
+C:\Users\Admin\Desktop\Dự án trên lớp\webdemo\bin\Debug\net6.0\webdemo.dll
+C:\Users\Admin\Desktop\Dự án trên lớp\webdemo\bin\Debug\net6.0\webdemo.pdb
+C:\Users\Admin\Desktop\Dự án trên lớp\webdemo\bin\Debug\net6.0\BouncyCastle.Crypto.dll
+C:\Users\Admin\Desktop\Dự án trên lớp\webdemo\bin\Debug\net6.0\DotNet.Cookies.dll
+C:\Users\Admin\Desktop\Dự án trên lớp\webdemo\bin\Debug\net6.0\EntityFramework.SqlServer.dll
+C:\Users\Admin\Desktop\Dự án trên lớp\webdemo\bin\Debug\net6.0\EntityFramework.dll
+C:\Users\Admin\Desktop\Dự án trên lớp\webdemo\bin\Debug\net6.0\Google.Protobuf.dll
+C:\Users\Admin\Desktop\Dự án trên lớp\webdemo\bin\Debug\net6.0\Humanizer.dll
+C:\Users\Admin\Desktop\Dự án trên lớp\webdemo\bin\Debug\net6.0\K4os.Compression.LZ4.dll
+C:\Users\Admin\Desktop\Dự án trên lớp\webdemo\bin\Debug\net6.0\K4os.Compression.LZ4.Streams.dll
+C:\Users\Admin\Desktop\Dự án trên lớp\webdemo\bin\Debug\net6.0\K4os.Hash.xxHash.dll
+C:\Users\Admin\Desktop\Dự án trên lớp\webdemo\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\Admin\Desktop\Dự án trên lớp\webdemo\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Admin\Desktop\Dự án trên lớp\webdemo\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\Admin\Desktop\Dự án trên lớp\webdemo\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\Admin\Desktop\Dự án trên lớp\webdemo\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\Admin\Desktop\Dự án trên lớp\webdemo\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\Admin\Desktop\Dự án trên lớp\webdemo\bin\Debug\net6.0\MySql.Data.dll
+C:\Users\Admin\Desktop\Dự án trên lớp\webdemo\bin\Debug\net6.0\Ubiety.Dns.Core.dll
+C:\Users\Admin\Desktop\Dự án trên lớp\webdemo\bin\Debug\net6.0\ZstdNet.dll
+C:\Users\Admin\Desktop\Dự án trên lớp\webdemo\bin\Debug\net6.0\MySql.Data.EntityFramework.dll
+C:\Users\Admin\Desktop\Dự án trên lớp\webdemo\bin\Debug\net6.0\MySql.EntityFrameworkCore.dll
+C:\Users\Admin\Desktop\Dự án trên lớp\webdemo\bin\Debug\net6.0\MySqlConnector.dll
+C:\Users\Admin\Desktop\Dự án trên lớp\webdemo\bin\Debug\net6.0\Pomelo.EntityFrameworkCore.MySql.dll
+C:\Users\Admin\Desktop\Dự án trên lớp\webdemo\bin\Debug\net6.0\System.CodeDom.dll
+C:\Users\Admin\Desktop\Dự án trên lớp\webdemo\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+C:\Users\Admin\Desktop\Dự án trên lớp\webdemo\bin\Debug\net6.0\System.Data.SqlClient.dll
+C:\Users\Admin\Desktop\Dự án trên lớp\webdemo\bin\Debug\net6.0\System.Drawing.Common.dll
+C:\Users\Admin\Desktop\Dự án trên lớp\webdemo\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Admin\Desktop\Dự án trên lớp\webdemo\bin\Debug\net6.0\System.Security.Permissions.dll
+C:\Users\Admin\Desktop\Dự án trên lớp\webdemo\bin\Debug\net6.0\System.Windows.Extensions.dll
+C:\Users\Admin\Desktop\Dự án trên lớp\webdemo\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\Admin\Desktop\Dự án trên lớp\webdemo\bin\Debug\net6.0\runtimes\win-arm64\native\sni.dll
+C:\Users\Admin\Desktop\Dự án trên lớp\webdemo\bin\Debug\net6.0\runtimes\win-x64\native\sni.dll
+C:\Users\Admin\Desktop\Dự án trên lớp\webdemo\bin\Debug\net6.0\runtimes\win-x86\native\sni.dll
+C:\Users\Admin\Desktop\Dự án trên lớp\webdemo\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Admin\Desktop\Dự án trên lớp\webdemo\bin\Debug\net6.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Admin\Desktop\Dự án trên lớp\webdemo\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\Admin\Desktop\Dự án trên lớp\webdemo\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\Admin\Desktop\Dự án trên lớp\webdemo\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Admin\Desktop\Dự án trên lớp\webdemo\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+C:\Users\Admin\Desktop\Dự án trên lớp\webdemo\obj\Debug\net6.0\webdemo.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\Dự án trên lớp\webdemo\obj\Debug\net6.0\webdemo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\Desktop\Dự án trên lớp\webdemo\obj\Debug\net6.0\webdemo.AssemblyInfoInputs.cache
+C:\Users\Admin\Desktop\Dự án trên lớp\webdemo\obj\Debug\net6.0\webdemo.AssemblyInfo.cs
+C:\Users\Admin\Desktop\Dự án trên lớp\webdemo\obj\Debug\net6.0\webdemo.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\Dự án trên lớp\webdemo\obj\Debug\net6.0\webdemo.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Admin\Desktop\Dự án trên lớp\webdemo\obj\Debug\net6.0\webdemo.RazorAssemblyInfo.cache
+C:\Users\Admin\Desktop\Dự án trên lớp\webdemo\obj\Debug\net6.0\webdemo.RazorAssemblyInfo.cs
+C:\Users\Admin\Desktop\Dự án trên lớp\webdemo\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\Admin\Desktop\Dự án trên lớp\webdemo\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\Admin\Desktop\Dự án trên lớp\webdemo\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\Admin\Desktop\Dự án trên lớp\webdemo\obj\Debug\net6.0\scopedcss\bundle\webdemo.styles.css
+C:\Users\Admin\Desktop\Dự án trên lớp\webdemo\obj\Debug\net6.0\scopedcss\projectbundle\webdemo.bundle.scp.css
+C:\Users\Admin\Desktop\Dự án trên lớp\webdemo\obj\Debug\net6.0\webdemo.csproj.CopyComplete
+C:\Users\Admin\Desktop\Dự án trên lớp\webdemo\obj\Debug\net6.0\webdemo.dll
+C:\Users\Admin\Desktop\Dự án trên lớp\webdemo\obj\Debug\net6.0\refint\webdemo.dll
+C:\Users\Admin\Desktop\Dự án trên lớp\webdemo\obj\Debug\net6.0\webdemo.pdb
+C:\Users\Admin\Desktop\Dự án trên lớp\webdemo\obj\Debug\net6.0\webdemo.genruntimeconfig.cache
+C:\Users\Admin\Desktop\Dự án trên lớp\webdemo\obj\Debug\net6.0\ref\webdemo.dll
+C:\Users\Admin\Desktop\Project\webdemo\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\Admin\Desktop\Project\webdemo\bin\Debug\net6.0\appsettings.json
+C:\Users\Admin\Desktop\Project\webdemo\bin\Debug\net6.0\webdemo.staticwebassets.runtime.json
+C:\Users\Admin\Desktop\Project\webdemo\bin\Debug\net6.0\webdemo.exe
+C:\Users\Admin\Desktop\Project\webdemo\bin\Debug\net6.0\webdemo.deps.json
+C:\Users\Admin\Desktop\Project\webdemo\bin\Debug\net6.0\webdemo.runtimeconfig.json
+C:\Users\Admin\Desktop\Project\webdemo\bin\Debug\net6.0\webdemo.dll
+C:\Users\Admin\Desktop\Project\webdemo\bin\Debug\net6.0\webdemo.pdb
+C:\Users\Admin\Desktop\Project\webdemo\bin\Debug\net6.0\BouncyCastle.Crypto.dll
+C:\Users\Admin\Desktop\Project\webdemo\bin\Debug\net6.0\DotNet.Cookies.dll
+C:\Users\Admin\Desktop\Project\webdemo\bin\Debug\net6.0\EntityFramework.SqlServer.dll
+C:\Users\Admin\Desktop\Project\webdemo\bin\Debug\net6.0\EntityFramework.dll
+C:\Users\Admin\Desktop\Project\webdemo\bin\Debug\net6.0\Google.Protobuf.dll
+C:\Users\Admin\Desktop\Project\webdemo\bin\Debug\net6.0\Humanizer.dll
+C:\Users\Admin\Desktop\Project\webdemo\bin\Debug\net6.0\K4os.Compression.LZ4.dll
+C:\Users\Admin\Desktop\Project\webdemo\bin\Debug\net6.0\K4os.Compression.LZ4.Streams.dll
+C:\Users\Admin\Desktop\Project\webdemo\bin\Debug\net6.0\K4os.Hash.xxHash.dll
+C:\Users\Admin\Desktop\Project\webdemo\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\Admin\Desktop\Project\webdemo\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Admin\Desktop\Project\webdemo\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\Admin\Desktop\Project\webdemo\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\Admin\Desktop\Project\webdemo\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\Admin\Desktop\Project\webdemo\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\Admin\Desktop\Project\webdemo\bin\Debug\net6.0\MySql.Data.dll
+C:\Users\Admin\Desktop\Project\webdemo\bin\Debug\net6.0\Ubiety.Dns.Core.dll
+C:\Users\Admin\Desktop\Project\webdemo\bin\Debug\net6.0\ZstdNet.dll
+C:\Users\Admin\Desktop\Project\webdemo\bin\Debug\net6.0\MySql.Data.EntityFramework.dll
+C:\Users\Admin\Desktop\Project\webdemo\bin\Debug\net6.0\MySql.EntityFrameworkCore.dll
+C:\Users\Admin\Desktop\Project\webdemo\bin\Debug\net6.0\MySqlConnector.dll
+C:\Users\Admin\Desktop\Project\webdemo\bin\Debug\net6.0\Pomelo.EntityFrameworkCore.MySql.dll
+C:\Users\Admin\Desktop\Project\webdemo\bin\Debug\net6.0\System.CodeDom.dll
+C:\Users\Admin\Desktop\Project\webdemo\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+C:\Users\Admin\Desktop\Project\webdemo\bin\Debug\net6.0\System.Data.SqlClient.dll
+C:\Users\Admin\Desktop\Project\webdemo\bin\Debug\net6.0\System.Drawing.Common.dll
+C:\Users\Admin\Desktop\Project\webdemo\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Admin\Desktop\Project\webdemo\bin\Debug\net6.0\System.Security.Permissions.dll
+C:\Users\Admin\Desktop\Project\webdemo\bin\Debug\net6.0\System.Windows.Extensions.dll
+C:\Users\Admin\Desktop\Project\webdemo\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\Admin\Desktop\Project\webdemo\bin\Debug\net6.0\runtimes\win-arm64\native\sni.dll
+C:\Users\Admin\Desktop\Project\webdemo\bin\Debug\net6.0\runtimes\win-x64\native\sni.dll
+C:\Users\Admin\Desktop\Project\webdemo\bin\Debug\net6.0\runtimes\win-x86\native\sni.dll
+C:\Users\Admin\Desktop\Project\webdemo\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Admin\Desktop\Project\webdemo\bin\Debug\net6.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Admin\Desktop\Project\webdemo\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\Admin\Desktop\Project\webdemo\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\Admin\Desktop\Project\webdemo\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Admin\Desktop\Project\webdemo\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+C:\Users\Admin\Desktop\Project\webdemo\obj\Debug\net6.0\webdemo.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\Project\webdemo\obj\Debug\net6.0\webdemo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\Desktop\Project\webdemo\obj\Debug\net6.0\webdemo.AssemblyInfoInputs.cache
+C:\Users\Admin\Desktop\Project\webdemo\obj\Debug\net6.0\webdemo.AssemblyInfo.cs
+C:\Users\Admin\Desktop\Project\webdemo\obj\Debug\net6.0\webdemo.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\Project\webdemo\obj\Debug\net6.0\webdemo.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Admin\Desktop\Project\webdemo\obj\Debug\net6.0\webdemo.RazorAssemblyInfo.cache
+C:\Users\Admin\Desktop\Project\webdemo\obj\Debug\net6.0\webdemo.RazorAssemblyInfo.cs
+C:\Users\Admin\Desktop\Project\webdemo\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\Admin\Desktop\Project\webdemo\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\Admin\Desktop\Project\webdemo\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\Admin\Desktop\Project\webdemo\obj\Debug\net6.0\scopedcss\bundle\webdemo.styles.css
+C:\Users\Admin\Desktop\Project\webdemo\obj\Debug\net6.0\scopedcss\projectbundle\webdemo.bundle.scp.css
+C:\Users\Admin\Desktop\Project\webdemo\obj\Debug\net6.0\webdemo.csproj.CopyComplete
+C:\Users\Admin\Desktop\Project\webdemo\obj\Debug\net6.0\webdemo.dll
+C:\Users\Admin\Desktop\Project\webdemo\obj\Debug\net6.0\refint\webdemo.dll
+C:\Users\Admin\Desktop\Project\webdemo\obj\Debug\net6.0\webdemo.pdb
+C:\Users\Admin\Desktop\Project\webdemo\obj\Debug\net6.0\webdemo.genruntimeconfig.cache
+C:\Users\Admin\Desktop\Project\webdemo\obj\Debug\net6.0\ref\webdemo.dll
+C:\Users\Admin\Desktop\Project\webdemo\bin\Debug\net6.0\System.Text.Json.dll

@@ -1,0 +1,116 @@
+@using webdemo.Models;
+@{
+ViewData["Title"] = "Upload Music";
+}
+
+<div class="ms_upload_wrapper marger_top60" style="padding: 0;display: flex;">
+    <form enctype="multipart/form-data" asp-action="AlbumCreate" id="CreateAlbum" style="width: 50%;margin-right: 50px;">
+        <div class=" marger_top60">
+            <div class="ms_upload_box" style="width: 100%;">
+                <div class="ms_heading">
+                    <h1>Tạo Album</h1>
+                </div>
+                <div class="ms_pro_form">
+                    <div class="form-group" style="width: 88%">
+                        <label>Tiêu đề *</label>
+                        <input type="text" placeholder="Tên Album..." name="name" class="form-control title">
+                    </div>
+                    <div class="form-group" style="width: 88%;">
+                        <label>Chọn Ảnh *</label>
+                        <input type="file" name="image" accept=".jpg, .jpeg, .png, .gif, .tiff, .psd, .raw, .webp" class="form-control image">
+                    </div>
+                    <div class="form-group">
+                        <label>Đường dẫn *</label>
+                        <input type="text" placeholder="Đường dẫn..." name="url" class="form-control canonical">
+                    </div>
+                    <div class="form-group">
+                        <label>Ai có thể xem Album của bạn</label>
+                        <select class="form-control" name="publish">
+                            <option value="1">Tất cả mọi người</option>
+                            <option value="0">Cá nhân</option>
+                        </select>
+                    </div>
+                    <div class="pro-form-btn text-center marger_top15">
+                        <div class="ms_upload_btn">
+                            <button class="ms_btn ms_btn_create_album" type="submit">Tạo Album</button>
+                            <a href="/" class="ms_btn">Huỷ bỏ</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <form enctype="multipart/form-data" asp-action="MusicCreate" id="UploadFile"  style="width: 50%;">
+        <div class=" marger_top60">
+            <div class="ms_upload_box" style="width: 100%;">
+                <div class="ms_heading">
+                    <h1>Thông tin bài hát</h1>
+                </div>
+                <div class="ms_pro_form">
+                    <div class="form-group" style="width: 88%;">
+                        <label>Chọn File *</label>
+                        <input type="file" name="music" accept=".mp3" class="form-control music">
+                    </div>
+                    <div class="form-group" style="width: 88%;">
+                        <label>Chọn Ảnh *</label>
+                        <input type="file" name="image" accept=".jpg, .jpeg, .png, .gif, .tiff, .psd, .raw, .webp" class="form-control image">
+                    </div>
+                    <div class="form-group">
+                        <label>Tiêu đề *</label>
+                        <input type="text" placeholder="Tên bài hát..." name="name" class="form-control title">
+                    </div>
+                    <div class="form-group">
+                        <label>Nghệ sĩ thực hiện *</label>
+                        <input type="text" placeholder="Tên nghệ sĩ..." name="artist" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Chọn Album</label>
+                        <select class="form-control" name="album">
+                            <option value="">Chọn Album</option>
+                            @foreach (Album item in Model.Albums) {
+                                <option value="@item.Id">@item.Name </option>
+                            }
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Thể loại</label>
+                        <select class="form-control" name="theloai">
+                            <option value="Cổ điển">Cổ điển</option>
+                            <option value="Lãng mạn">Lãng mạn</option>
+                            <option value="EDM">EDM</option>
+                            <option value="Dancing">Dancing</option>
+                            <option value="Hiphop">Hiphop</option>
+                            <option value="Rock">Rock</option>
+                            <option value="Jazz">Jazz</option>
+                            <option value="Metal">Metal</option>
+                            <option value="Pop">Pop</option>
+                            <option value="Folk">Folk</option>
+                            <option value="Indie">Indie</option>
+                            <option value="Soul">Soul</option>
+                            <option value="Blues">Blues</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Đường dẫn *</label>
+                        <input type="text" placeholder="Đường dẫn..." name="url" class="form-control canonical">
+                    </div>
+                    <div class="form-group">
+                        <label>Ai có thể xem bài hát của bạn</label>
+                        <select class="form-control" name="publish">
+                            <option value="1">Tất cả mọi người</option>
+                            <option value="0">Cá nhân</option>
+                        </select>
+                    </div>
+                    <div class="pro-form-btn text-center marger_top15">
+                        <div class="ms_upload_btn">
+                            <button class="ms_btn create_music">Upload Ngay</button>
+                            <a href="/" class="ms_btn">Huỷ bỏ</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+<script src="~/js/actionCreate.js"></script>

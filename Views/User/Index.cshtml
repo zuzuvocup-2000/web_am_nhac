@@ -1,0 +1,41 @@
+@{
+    ViewData["Title"] = "Trang cá nhân";
+}
+<div class="ms_profile_wrapper">
+    <h1>Chỉnh sửa trang cá nhân</h1>
+    <div class="ms_profile_box">
+        <div class="ms_pro_img">
+            <img src="/images/images.jpg" alt="" class="img-fluid">
+            <div class="pro_img_overlay">
+                <i class="fa_icon edit_icon"></i>
+            </div>
+        </div>
+        <div class="ms_pro_form">
+            <div class="form-group">
+                <label>Họ và tên *</label>
+                <input type="text" name="fullname" placeholder="Tên của bạn" value="@ViewBag.fullname" class="form-control fullname-user">
+                <input type="hidden"  value="@ViewBag.id" class="form-control id-user">
+            </div>
+            <div class="form-group">
+                <label>Email *</label>
+                <input type="text" name="email" placeholder="Email..." value="@ViewBag.email" class="form-control email-user">
+            </div>
+            <div class="form-group">
+                <label>Mật khẩu cũ *</label>
+                <input type="password" placeholder="" value="" class="form-control old-password">
+            </div>
+            <div class="form-group">
+                <label>Mật khẩu mới *</label>
+                <input type="password" placeholder="" value="" class="form-control new-password">
+            </div>
+            <div class="form-group">
+                <label>Xác nhận mật khẩu *</label>
+                <input type="password" placeholder="" class="form-control confirm-password">
+            </div>
+            <div class="pro-form-btn text-center marger_top15">
+                <a href="" class="ms_btn btn-change-password">Lưu lại</a>
+                <a href="/" class="ms_btn">Huỷ bỏ</a>
+            </div>
+        </div>
+    </div>
+</div>

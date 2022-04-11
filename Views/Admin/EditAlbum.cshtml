@@ -1,0 +1,63 @@
+@using System.Web
+@using webdemo.Models;
+@{
+Layout="Admin/Manager/_Manager";
+ViewBag.Title = "Edit Album";
+}
+
+
+<!--begin::Card-->
+<div class="card card-custom gutter-b example example-compact">
+    <div class="card-header">
+        <h3 class="card-title">Form edit album</h3>
+    </div>
+    <!--begin::Form-->
+    <form enctype="multipart/form-data" action="/admin/actioneditalbum?id=@Model.Album.Id" method="POST">
+        <div class="card-body">
+            <div class="form-group">
+                <label>Tiêu đề</label>
+                <input name="name" value="@Model.Album.Name" type="text" class="form-control" placeholder="" />
+            </div>
+            <div class="form-group">
+                <label>Đường dẫn</label>
+                <input name="url" value="@Model.Album.Url" type="text" class="form-control" placeholder="" />
+            </div>
+            <div class="form-group">
+                <label>Ai có thể xem Album của bạn</label>
+                <select class="form-control select-publish" name="publish">
+                    <option value="1">Tất cả mọi người</option>
+                    <option value="0">Cá nhân</option>
+                </select>
+            </div>
+            <div class="image-input image-input-outline" id="kt_image_1">
+                <div class="image-input-wrapper" style="background-image: url(..@HttpUtility.UrlDecode(Model.Album.Image).Replace('\\', '/'))"></div>
+
+                <label class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow"
+                    data-action="change" data-toggle="tooltip" title="" data-original-title="Change avatar">
+                    <i class="fa fa-pen icon-sm text-muted"></i>
+                    <input type="file" name="image" accept=".jpg, .jpeg, .png, .gif, .tiff, .psd, .raw, .webp" />
+                    <input type="hidden" name="image_remove" value="@HttpUtility.UrlDecode(Model.Album.Image)"/>
+                </label>
+
+                <span class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow"
+                    data-action="cancel" data-toggle="tooltip" title="Cancel avatar">
+                    <i class="ki ki-bold-close icon-xs text-muted"></i>
+                </span>
+            </div>
+        </div>
+        <div class="card-footer">
+            <button type="submit" class="btn btn-primary mr-2">Chỉnh sửa</button>
+            <a href="/admin/Album" type="reset" class="btn btn-secondary">Huỷ bỏ</a>
+        </div>
+    </form>
+    <!--end::Form-->
+</div>
+<!--end::Card-->
+
+@section Scripts
+{
+<script type="text/javascript">
+    $(".select-publish option[value=@Model.Album.Publish]").attr('selected', 'selected');
+    var avatar1 = new KTImageInput('kt_image_1');
+</script>
+}

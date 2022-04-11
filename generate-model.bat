@@ -1,0 +1,1 @@
+dotnet ef dbcontext scaffold "Server=localhost;User=root;Password=root;Database=music_data;Connection Timeout=20;Persist Security Info=False;Port=3307;Allow User Variables=True;Connect Timeout=120;" Pomelo.EntityFrameworkCore.MySql -o Models -f

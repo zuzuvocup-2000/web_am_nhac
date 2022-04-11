@@ -1,0 +1,169 @@
+@{
+ViewData["Title"] = "Thanh toán";
+}
+<div class="ms_account_wrapper" style="padding: 10px 0;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2>Mua tài khoản</h2>
+                <div class="ms_heading">
+                    <h1>Tài khoản xịn nhất từ trước đến nay không mua phí cả 1 đời người</h1>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="ms_plan_box">
+                    <div class="ms_plan_header">
+                        <div class="ms_plan_img">
+                            <img src="/images/plan_icon1.png" alt="">
+                        </div>
+                    </div>
+                    <h3 class="plan_heading">Cơ bản</h3>
+                    <div class="plan_price">
+                        <div class="plan_dolar"><sup>$</sup>15</div>
+                    </div>
+                    <ul>
+                        <li>Nghe nhạc miễn phí</li>
+                        <li>Được làm người yêu Lộc</li>
+                        <li>Hiệu lực của gói - 1 tháng</li>
+                    </ul>
+                    <div class="ms_plan_btn">
+                        <a href="#" class="ms_btn btn-buy-account" data-toggle="modal" data-target="#exampleModal">Mua
+                            ngay</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="ms_plan_box paln_active">
+                    <div class="ms_plan_header">
+                        <div class="ms_plan_img">
+                            <img src="/images/plan_icon2.png" alt="">
+                        </div>
+                    </div>
+                    <h3 class="plan_heading">Chuyên nghiệp</h3>
+                    <div class="plan_price">
+                        <div class="plan_dolar"><sup>$</sup>50</div>
+                    </div>
+                    <ul>
+                        <li>Nghe nhạc miễn phí</li>
+                        <li>Upload nhạc miễn phí</li>
+                        <li>Được làm người yêu Lộc, Hiếu</li>
+                        <li>Hiệu lực của gói - 1 tháng</li>
+                    </ul>
+                    <div class="ms_plan_btn">
+                        <a href="#" class="ms_btn btn-buy-account" data-toggle="modal" data-target="#exampleModal">Mua
+                            ngay</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="ms_plan_box">
+                    <div class="ms_plan_header">
+                        <div class="ms_plan_img">
+                            <img src="/images/plan_icon3.png" alt="">
+                        </div>
+                    </div>
+                    <h3 class="plan_heading">Tiêu chuẩn</h3>
+                    <div class="plan_price">
+                        <div class="plan_dolar"><sup>$</sup>80</div>
+                    </div>
+                    <ul>
+                        <li>Nghe nhạc miễn phí</li>
+                        <li>Upload nhạc miễn phí</li>
+                        <li>Được làm người yêu Lộc, Hiếu, Nguyên, Hải</li>
+                        <li>Vanh và Doanh đã có người yêu nên không để bày bán (nhu cầu bồ nhí thì được (^_^) )</li>
+                        <li>Hiệu lực của gói - 1 tháng</li>
+                    </ul>
+                    <div class="ms_plan_btn">
+                        <a href="#" class="ms_btn btn-buy-account" data-toggle="modal" data-target="#exampleModal">Mua
+                            ngay</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal">
+                <i class="fa_icon form_close"></i>
+            </button>
+            <div class="modal-body">
+                <div class="ms_register_img">
+                    <img src="/images/register_img.png" alt="" class="img-fluid" />
+                </div>
+                <div class="ms_register_form">
+                    <h2>Thanh toán</h2>
+                    <form action="" id="form-register" method="post" class="row">
+                        <div class="form-group col-lg-12">
+                            <label for="" style="text-align: left;color: #fff;display:block;">Gói thanh toán</label>
+                            <select name="type"  class="form-control">
+                                <option value="">Chọn gói cần thanh toán</option>
+                                <option value="1">Cơ bản</option>
+                                <option value="2">Chuyên nghiệp</option>
+                                <option value="3">Tiêu chuẩn</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-lg-6">
+                            <label for="" style="text-align: left;color: #fff;display:block;">Loại thẻ</label>
+                            <select name="card_type_id"  class="form-control">
+                                <option value="">Chọn loại thẻ</option>
+                                <option value="VTT">Viettel</option>
+                                <option value="VMS">Mobiphone</option>
+                                <option value="VNP">Vinaphone</option>
+                                <option value="ZING">Zing</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-lg-6">
+                            <label for="" style="text-align: left;color: #fff;display:block;">Mệnh giá thẻ</label>
+                            <select name="card_type_id"  class="form-control">
+                                <option value="">Chọn mệnh giá thẻ</option>
+                                <option value="100000">100.000</option>
+                                <option value="200000">200.000</option>
+                                <option value="500000">500.000</option>
+                                <option value="1000000">1.000.000</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-lg-6">
+                            <label for="" style="text-align: left;color: #fff;display:block;">Số Seri</label>
+                            <input type="text" name="seri" placeholder="" class="form-control ">
+                        </div>
+                        <div class="form-group col-lg-6">
+                            <label for="" style="text-align: left;color: #fff;display:block;">Mã thẻ</label>
+                            <input type="text" name="code" placeholder="" class="form-control ">
+                        </div>
+                        <div class="form-group col-lg-12">
+                            <a class="ms_btn btn-submit-payment" href="">Đồng ý</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+
+</script>
+
+<style>
+    .modal-open .ms_main_wrapper {
+        -webkit-filter: none;
+        -moz-filter: none;
+        -o-filter: none;
+        -ms-filter: none;
+        filter: none;
+    }
+
+    .ms_register_img {
+        width: 300px;
+        float: left;
+    }
+    .ms_register_form {
+        width: calc(100% - 300px);
+        float: left;
+        padding-left: 50px;
+        text-align: center;
+    }
+</style>

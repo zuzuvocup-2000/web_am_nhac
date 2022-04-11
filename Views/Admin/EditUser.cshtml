@@ -1,0 +1,44 @@
+@using webdemo.Models;
+@{
+    Layout="Admin/Manager/_Manager";
+    ViewBag.Title = "Edit User";
+}
+
+
+<!--begin::Card-->
+<div class="card card-custom gutter-b example example-compact">
+    <div class="card-header">
+        <h3 class="card-title">Form edit user</h3>
+    </div>
+    <!--begin::Form-->
+    <form action="/admin/actionedituser?id=@Model.User.Id" method="POST">
+        <div class="card-body">
+            <div class="form-group">
+                <label>Họ và tên</label>
+                <input name="name" value="@Model.User.Name" type="text" class="form-control" placeholder="" />
+            </div>
+            <div class="form-group">
+                <label>Email</label>
+                <input name="email" value="@Model.User.Email" type="text" class="form-control" placeholder="" />
+            </div>
+            <div class="form-group">
+                <label>Mật khẩu</label>
+                <input name="password" value="@Model.User.PassWord" type="text" class="form-control" placeholder="" />
+            </div>
+            <div class="form-group">
+                <label>Loại tài khoản</label>
+                <input name="type" value="@Model.User.Type" type="text" class="form-control" placeholder="" />
+            </div>
+            <div class="form-group">
+                <label>Coin</label>
+                <input name="coin" value="@Model.User.Coin" type="text" class="form-control" placeholder="" />
+            </div>
+        </div>
+        <div class="card-footer">
+            <button type="submit" class="btn btn-primary mr-2">Chỉnh sửa</button>
+            <a href="/admin/user" type="reset" class="btn btn-secondary">Huỷ bỏ</a>
+        </div>
+    </form>
+    <!--end::Form-->
+</div>
+<!--end::Card-->

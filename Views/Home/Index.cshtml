@@ -1,0 +1,1609 @@
+﻿@using webdemo.Models;
+@using System.Web;
+@{
+    ViewData["Title"] = "Trang chủ";
+    int count = 0;
+    int dem_row_2 = 0; 
+    int dem_row_3 = 0; 
+}
+
+
+
+
+<div class="ms_rcnt_slider">
+    <div class="ms_heading">
+        <h1>Album nổi bật</h1>
+        <span class="veiw_all"><a href="/album/index">Xem thêm</a></span>
+    </div>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            @foreach (Album item in Model.Albums) {
+            <div class="swiper-slide">
+                <div class="ms_rcnt_box">
+                    <div class="ms_rcnt_box_img">
+                        <div class="va-thumb-1-1">
+                            <div class="img-cover">
+                                <img src="@HttpUtility.UrlDecode(item.Image)" alt="">
+                            </div>
+                        </div>
+                        <div class="ms_main_overlay">
+                            <div class="ms_box_overlay"></div>
+                            <div class="ms_more_icon">
+                                <img src="/images/svg/more.svg" alt="">
+                            </div>
+                            <ul class="more_option">
+                                <li><a href="#"><span class="opt_icon"><span class="icon icon_fav"></span></span>Add To Favourites</a></li>
+                                <li><a href="#"><span class="opt_icon"><span class="icon icon_queue"></span></span>Add To Queue</a></li>
+                                <li><a href="#"><span class="opt_icon"><span class="icon icon_dwn"></span></span>Download Now</a></li>
+                                <li><a href="#"><span class="opt_icon"><span class="icon icon_playlst"></span></span>Add To Playlist</a></li>
+                                <li><a href="#"><span class="opt_icon"><span class="icon icon_share"></span></span>Share</a></li>
+                            </ul>
+                            <div class="ms_play_icon">
+                                <img src="/images/svg/play.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ms_rcnt_box_text">
+                        <h3><a href="@item.Url">@item.Name</a></h3>
+                    </div>
+                </div>
+            </div>
+            }
+        </div>
+    </div>
+    <!-- Add Arrows -->
+    <div class="swiper-button-next slider_nav_next"></div>
+    <div class="swiper-button-prev slider_nav_prev"></div>
+</div>
+<div class="ms_weekly_wrapper">
+    <div class="ms_weekly_inner">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="ms_heading">
+                    <h1>weekly top 15</h1>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-12 padding_right40">
+                @foreach (Music item_music in Model.newsOrder) {
+                @if (count == 5){
+                    break; 
+                }
+                count++;
+                <div class="ms_weekly_box ">
+                    <div class="weekly_left">
+                        <span class="w_top_no">
+                            @count
+                        </span>
+                        <div class="w_top_song">
+                            <div class="w_tp_song_img">
+                                <img src="@HttpUtility.UrlDecode(item_music.Image)" alt="" class="img-fluid">
+                                <div class="ms_song_overlay">
+                                </div>
+                                <div class="ms_play_icon">
+                                    <img src="/images/svg/play.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="w_tp_song_name">
+                                <h3><a href="#">@item_music.Name</a></h3>
+                                <p>@item_music.Artist</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="weekly_right">
+                        <span class="ms_more_icon" data-other="1">
+                            <img src="/images/svg/more1.svg" alt="">
+                        </span>
+                    </div>
+                    <ul class="more_option">
+                        <li><a href="#"><span class="opt_icon"><span class="icon icon_fav"></span></span>Add To
+                                Favourites</a></li>
+                        <li><a href="#"><span class="opt_icon"><span class="icon icon_queue"></span></span>Add To
+                                Queue</a></li>
+                        <li><a href="@HttpUtility.UrlDecode(item_music.Music1)" download><span class="opt_icon"><span class="icon icon_dwn"></span></span>Download
+                                Now</a></li>
+                        <li><a href="#"><span class="opt_icon"><span class="icon icon_playlst"></span></span>Add To
+                                Playlist</a></li>
+                        <li><a href="#"><span class="opt_icon"><span class="icon icon_share"></span></span>Share</a>
+                        </li>
+                    </ul>
+                </div>
+                @if (count < 4){
+                    <div class="ms_divider"></div>
+                }
+                }
+            </div>
+            <div class="col-lg-4 col-md-12 padding_right40">
+                @foreach (Music item_music in Model.newsOrder) {
+                dem_row_2++;
+                @if (dem_row_2 <= 5){
+                    continue; 
+                }
+                @if (count == 10){
+                    break; 
+                }
+                count++;
+                <div class="ms_weekly_box ">
+                    <div class="weekly_left">
+                        <span class="w_top_no">
+                            @count
+                        </span>
+                        <div class="w_top_song">
+                            <div class="w_tp_song_img">
+                                <img src="@HttpUtility.UrlDecode(item_music.Image)" alt="" class="img-fluid">
+                                <div class="ms_song_overlay">
+                                </div>
+                                <div class="ms_play_icon">
+                                    <img src="/images/svg/play.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="w_tp_song_name">
+                                <h3><a href="#">@item_music.Name</a></h3>
+                                <p>@item_music.Artist</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="weekly_right">
+                        <span class="ms_more_icon" data-other="1">
+                            <img src="/images/svg/more1.svg" alt="">
+                        </span>
+                    </div>
+                    <ul class="more_option">
+                        <li><a href="#"><span class="opt_icon"><span class="icon icon_fav"></span></span>Add To
+                                Favourites</a></li>
+                        <li><a href="#"><span class="opt_icon"><span class="icon icon_queue"></span></span>Add To
+                                Queue</a></li>
+                        <li><a href="@HttpUtility.UrlDecode(item_music.Music1)" download><span class="opt_icon"><span class="icon icon_dwn"></span></span>Download
+                                Now</a></li>
+                        <li><a href="#"><span class="opt_icon"><span class="icon icon_playlst"></span></span>Add To
+                                Playlist</a></li>
+                        <li><a href="#"><span class="opt_icon"><span class="icon icon_share"></span></span>Share</a>
+                        </li>
+                    </ul>
+                </div>
+                @if (count > 5 && count < 10){
+                    <div class="ms_divider"></div>
+                }
+                }
+            </div>
+            <div class="col-lg-4 col-md-12">
+                @foreach (Music item_music in Model.newsOrder) {
+                dem_row_3++;
+                @if (dem_row_3 <= 10){
+                    continue; 
+                }
+                @if (count == 15){
+                    break; 
+                }
+                count++;
+                <div class="ms_weekly_box ">
+                    <div class="weekly_left">
+                        <span class="w_top_no">
+                            @count
+                        </span>
+                        <div class="w_top_song">
+                            <div class="w_tp_song_img">
+                                <img src="@HttpUtility.UrlDecode(item_music.Image)" alt="" class="img-fluid">
+                                <div class="ms_song_overlay">
+                                </div>
+                                <div class="ms_play_icon">
+                                    <img src="/images/svg/play.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="w_tp_song_name">
+                                <h3><a href="#">@item_music.Name</a></h3>
+                                <p>@item_music.Artist</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="weekly_right">
+                        <span class="ms_more_icon" data-other="1">
+                            <img src="/images/svg/more1.svg" alt="">
+                        </span>
+                    </div>
+                    <ul class="more_option">
+                        <li><a href="#"><span class="opt_icon"><span class="icon icon_fav"></span></span>Add To
+                                Favourites</a></li>
+                        <li><a href="#"><span class="opt_icon"><span class="icon icon_queue"></span></span>Add To
+                                Queue</a></li>
+                        <li><a href="@HttpUtility.UrlDecode(item_music.Music1)" download><span class="opt_icon"><span class="icon icon_dwn"></span></span>Download
+                                Now</a></li>
+                        <li><a href="#"><span class="opt_icon"><span class="icon icon_playlst"></span></span>Add To
+                                Playlist</a></li>
+                        <li><a href="#"><span class="opt_icon"><span class="icon icon_share"></span></span>Share</a>
+                        </li>
+                    </ul>
+                </div>
+                @if (count > 10 && count < 15){
+                    <div class="ms_divider"></div>
+                }
+                }
+            </div>
+        </div>
+    </div>
+</div>
+<div class="ms_featured_slider">
+    <div class="ms_heading">
+        <h1>Featured Artists</h1>
+        <span class="veiw_all"><a href="#">Xem thêm</a></span>
+    </div>
+    <div class="ms_feature_slider swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="ms_rcnt_box">
+                    <div class="ms_rcnt_box_img">
+                        <img src="/images/featured/song1.jpg" alt="">
+                        <div class="ms_main_overlay">
+                            <div class="ms_box_overlay"></div>
+                            <div class="ms_more_icon">
+                                <img src="/images/svg/more.svg" alt="">
+                            </div>
+                            <ul class="more_option">
+                                <li><a href="#"><span class="opt_icon"><span class="icon icon_fav"></span></span>Add To
+                                        Favourites</a></li>
+                                <li><a href="#"><span class="opt_icon"><span class="icon icon_queue"></span></span>Add
+                                        To Queue</a></li>
+                                <li><a href="#"><span class="opt_icon"><span
+                                                class="icon icon_dwn"></span></span>Download Now</a></li>
+                                <li><a href="#"><span class="opt_icon"><span class="icon icon_playlst"></span></span>Add
+                                        To Playlist</a></li>
+                                <li><a href="#"><span class="opt_icon"><span
+                                                class="icon icon_share"></span></span>Share</a></li>
+                            </ul>
+                            <div class="ms_play_icon">
+                                <img src="/images/svg/play.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ms_rcnt_box_text">
+                        <h3><a href="#">Best Of Ava Cornish</a></h3>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="ms_rcnt_box">
+                    <div class="ms_rcnt_box_img">
+                        <img src="/images/featured/song2.jpg" alt="">
+                        <div class="ms_main_overlay">
+                            <div class="ms_box_overlay"></div>
+                            <div class="ms_more_icon">
+                                <img src="/images/svg/more.svg" alt="">
+                            </div>
+                            <ul class="more_option">
+                                <li><a href="#"><span class="opt_icon"><span class="icon icon_fav"></span></span>Add To
+                                        Favourites</a></li>
+                                <li><a href="#"><span class="opt_icon"><span class="icon icon_queue"></span></span>Add
+                                        To Queue</a></li>
+                                <li><a href="#"><span class="opt_icon"><span
+                                                class="icon icon_dwn"></span></span>Download Now</a></li>
+                                <li><a href="#"><span class="opt_icon"><span class="icon icon_playlst"></span></span>Add
+                                        To Playlist</a></li>
+                                <li><a href="#"><span class="opt_icon"><span
+                                                class="icon icon_share"></span></span>Share</a></li>
+                            </ul>
+                            <div class="ms_play_icon">
+                                <img src="/images/svg/play.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ms_rcnt_box_text">
+                        <h3><a href="#">Until I Met You</a></h3>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="ms_rcnt_box">
+                    <div class="ms_rcnt_box_img">
+                        <img src="/images/featured/song3.jpg" alt="">
+                        <div class="ms_main_overlay">
+                            <div class="ms_box_overlay"></div>
+                            <div class="ms_more_icon">
+                                <img src="/images/svg/more.svg" alt="">
+                            </div>
+                            <ul class="more_option">
+                                <li><a href="#"><span class="opt_icon"><span class="icon icon_fav"></span></span>Add To
+                                        Favourites</a></li>
+                                <li><a href="#"><span class="opt_icon"><span class="icon icon_queue"></span></span>Add
+                                        To Queue</a></li>
+                                <li><a href="#"><span class="opt_icon"><span
+                                                class="icon icon_dwn"></span></span>Download Now</a></li>
+                                <li><a href="#"><span class="opt_icon"><span class="icon icon_playlst"></span></span>Add
+                                        To Playlist</a></li>
+                                <li><a href="#"><span class="opt_icon"><span
+                                                class="icon icon_share"></span></span>Share</a></li>
+                            </ul>
+                            <div class="ms_play_icon">
+                                <img src="/images/svg/play.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ms_rcnt_box_text">
+                        <h3><a href="#">Gimme Some Courage</a></h3>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="ms_rcnt_box">
+                    <div class="ms_rcnt_box_img">
+                        <img src="/images/featured/song4.jpg" alt="">
+                        <div class="ms_main_overlay">
+                            <div class="ms_box_overlay"></div>
+                            <div class="ms_more_icon">
+                                <img src="/images/svg/more.svg" alt="">
+                            </div>
+                            <ul class="more_option">
+                                <li><a href="#"><span class="opt_icon"><span class="icon icon_fav"></span></span>Add To
+                                        Favourites</a></li>
+                                <li><a href="#"><span class="opt_icon"><span class="icon icon_queue"></span></span>Add
+                                        To Queue</a></li>
+                                <li><a href="#"><span class="opt_icon"><span
+                                                class="icon icon_dwn"></span></span>Download Now</a></li>
+                                <li><a href="#"><span class="opt_icon"><span class="icon icon_playlst"></span></span>Add
+                                        To Playlist</a></li>
+                                <li><a href="#"><span class="opt_icon"><span
+                                                class="icon icon_share"></span></span>Share</a></li>
+                            </ul>
+                            <div class="ms_play_icon">
+                                <img src="/images/svg/play.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ms_rcnt_box_text">
+                        <h3><a href="#">Dark Alley Acoustic</a></h3>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="ms_rcnt_box">
+                    <div class="ms_rcnt_box_img">
+                        <img src="/images/featured/song5.jpg" alt="">
+                        <div class="ms_main_overlay">
+                            <div class="ms_box_overlay"></div>
+                            <div class="ms_more_icon">
+                                <img src="/images/svg/more.svg" alt="">
+                            </div>
+                            <ul class="more_option">
+                                <li><a href="#"><span class="opt_icon"><span class="icon icon_fav"></span></span>Add To
+                                        Favourites</a></li>
+                                <li><a href="#"><span class="opt_icon"><span class="icon icon_queue"></span></span>Add
+                                        To Queue</a></li>
+                                <li><a href="#"><span class="opt_icon"><span
+                                                class="icon icon_dwn"></span></span>Download Now</a></li>
+                                <li><a href="#"><span class="opt_icon"><span class="icon icon_playlst"></span></span>Add
+                                        To Playlist</a></li>
+                                <li><a href="#"><span class="opt_icon"><span
+                                                class="icon icon_share"></span></span>Share</a></li>
+                            </ul>
+                            <div class="ms_play_icon">
+                                <img src="/images/svg/play.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ms_rcnt_box_text">
+                        <h3><a href="#">Walking Promises</a></h3>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="ms_rcnt_box">
+                    <div class="ms_rcnt_box_img">
+                        <img src="/images/featured/song6.jpg" alt="">
+                        <div class="ms_main_overlay">
+                            <div class="ms_box_overlay"></div>
+                            <div class="ms_more_icon">
+                                <img src="/images/svg/more.svg" alt="">
+                            </div>
+                            <ul class="more_option">
+                                <li><a href="#"><span class="opt_icon"><span class="icon icon_fav"></span></span>Add To
+                                        Favourites</a></li>
+                                <li><a href="#"><span class="opt_icon"><span class="icon icon_queue"></span></span>Add
+                                        To Queue</a></li>
+                                <li><a href="#"><span class="opt_icon"><span
+                                                class="icon icon_dwn"></span></span>Download Now</a></li>
+                                <li><a href="#"><span class="opt_icon"><span class="icon icon_playlst"></span></span>Add
+                                        To Playlist</a></li>
+                                <li><a href="#"><span class="opt_icon"><span
+                                                class="icon icon_share"></span></span>Share</a></li>
+                            </ul>
+                            <div class="ms_play_icon">
+                                <img src="/images/svg/play.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ms_rcnt_box_text">
+                        <h3><a href="#">Desired Games</a></h3>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="ms_rcnt_box">
+                    <div class="ms_rcnt_box_img">
+                        <img src="/images/featured/song1.jpg" alt="">
+                        <div class="ms_main_overlay">
+                            <div class="ms_box_overlay"></div>
+                            <div class="ms_more_icon">
+                                <img src="/images/svg/more.svg" alt="">
+                            </div>
+                            <ul class="more_option">
+                                <li><a href="#"><span class="opt_icon"><span class="icon icon_fav"></span></span>Add To
+                                        Favourites</a></li>
+                                <li><a href="#"><span class="opt_icon"><span class="icon icon_queue"></span></span>Add
+                                        To Queue</a></li>
+                                <li><a href="#"><span class="opt_icon"><span
+                                                class="icon icon_dwn"></span></span>Download Now</a></li>
+                                <li><a href="#"><span class="opt_icon"><span class="icon icon_playlst"></span></span>Add
+                                        To Playlist</a></li>
+                                <li><a href="#"><span class="opt_icon"><span
+                                                class="icon icon_share"></span></span>Share</a></li>
+                            </ul>
+                            <div class="ms_play_icon">
+                                <img src="/images/svg/play.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ms_rcnt_box_text">
+                        <h3><a href="#">Dream Your Moments (Duet)</a></h3>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="ms_rcnt_box">
+                    <div class="ms_rcnt_box_img">
+                        <img src="/images/featured/song2.jpg" alt="">
+                        <div class="ms_main_overlay">
+                            <div class="ms_box_overlay"></div>
+                            <div class="ms_more_icon">
+                                <img src="/images/svg/more.svg" alt="">
+                            </div>
+                            <ul class="more_option">
+                                <li><a href="#"><span class="opt_icon"><span class="icon icon_fav"></span></span>Add To
+                                        Favourites</a></li>
+                                <li><a href="#"><span class="opt_icon"><span class="icon icon_queue"></span></span>Add
+                                        To Queue</a></li>
+                                <li><a href="#"><span class="opt_icon"><span
+                                                class="icon icon_dwn"></span></span>Download Now</a></li>
+                                <li><a href="#"><span class="opt_icon"><span class="icon icon_playlst"></span></span>Add
+                                        To Playlist</a></li>
+                                <li><a href="#"><span class="opt_icon"><span
+                                                class="icon icon_share"></span></span>Share</a></li>
+                            </ul>
+                            <div class="ms_play_icon">
+                                <img src="/images/svg/play.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ms_rcnt_box_text">
+                        <h3><a href="#">Until I Met You</a></h3>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="ms_rcnt_box">
+                    <div class="ms_rcnt_box_img">
+                        <img src="/images/featured/song3.jpg" alt="">
+                        <div class="ms_main_overlay">
+                            <div class="ms_box_overlay"></div>
+                            <div class="ms_more_icon">
+                                <img src="/images/svg/more.svg" alt="">
+                            </div>
+                            <ul class="more_option">
+                                <li><a href="#"><span class="opt_icon"><span class="icon icon_fav"></span></span>Add To
+                                        Favourites</a></li>
+                                <li><a href="#"><span class="opt_icon"><span class="icon icon_queue"></span></span>Add
+                                        To Queue</a></li>
+                                <li><a href="#"><span class="opt_icon"><span
+                                                class="icon icon_dwn"></span></span>Download Now</a></li>
+                                <li><a href="#"><span class="opt_icon"><span class="icon icon_playlst"></span></span>Add
+                                        To Playlist</a></li>
+                                <li><a href="#"><span class="opt_icon"><span
+                                                class="icon icon_share"></span></span>Share</a></li>
+                            </ul>
+                            <div class="ms_play_icon">
+                                <img src="/images/svg/play.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ms_rcnt_box_text">
+                        <h3><a href="#">Gimme Some Courage</a></h3>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="ms_rcnt_box">
+                    <div class="ms_rcnt_box_img">
+                        <img src="/images/featured/song4.jpg" alt="">
+                        <div class="ms_main_overlay">
+                            <div class="ms_box_overlay"></div>
+                            <div class="ms_more_icon">
+                                <img src="/images/svg/more.svg" alt="">
+                            </div>
+                            <ul class="more_option">
+                                <li><a href="#"><span class="opt_icon"><span class="icon icon_fav"></span></span>Add To
+                                        Favourites</a></li>
+                                <li><a href="#"><span class="opt_icon"><span class="icon icon_queue"></span></span>Add
+                                        To Queue</a></li>
+                                <li><a href="#"><span class="opt_icon"><span
+                                                class="icon icon_dwn"></span></span>Download Now</a></li>
+                                <li><a href="#"><span class="opt_icon"><span class="icon icon_playlst"></span></span>Add
+                                        To Playlist</a></li>
+                                <li><a href="#"><span class="opt_icon"><span
+                                                class="icon icon_share"></span></span>Share</a></li>
+                            </ul>
+                            <div class="ms_play_icon">
+                                <img src="/images/svg/play.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ms_rcnt_box_text">
+                        <h3><a href="#">Dark Alley Acoustic</a></h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Add Arrows -->
+    <div class="swiper-button-next1 slider_nav_next"></div>
+    <div class="swiper-button-prev1 slider_nav_prev"></div>
+</div>
+<div class="ms_advr_wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <a href="#"><img src="/images/adv.jpg" alt="" class="img-fluid" /></a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="ms_releases_wrapper">
+    <div class="ms_heading">
+        <h1>New Releases</h1>
+        <span class="veiw_all"><a href="#">Xem thêm</a></span>
+    </div>
+    <div class="ms_release_slider swiper-container">
+        <div class="ms_divider"></div>
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="ms_release_box">
+                    <div class="w_top_song">
+                        <span class="slider_dot"></span>
+                        <div class="w_tp_song_img">
+                            <img src="/images/weekly/song1.jpg" alt="">
+                            <div class="ms_song_overlay">
+                            </div>
+                            <div class="ms_play_icon">
+                                <img src="/images/svg/play.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="w_tp_song_name">
+                            <h3><a href="#">Dark Alley Acoustic</a></h3>
+                            <p>Ava Cornish</p>
+                        </div>
+                    </div>
+                    <div class="weekly_right">
+                        <span class="w_song_time">5:10</span>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="ms_release_box">
+                    <div class="w_top_song">
+                        <span class="slider_dot"></span>
+                        <div class="w_tp_song_img">
+                            <img src="/images/weekly/song2.jpg" alt="">
+                            <div class="ms_song_overlay">
+                            </div>
+                            <div class="ms_play_icon">
+                                <img src="/images/svg/play.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="w_tp_song_name">
+                            <h3><a href="#">Dark Alley Acoustic</a></h3>
+                            <p>Ava Cornish</p>
+                        </div>
+                    </div>
+                    <div class="weekly_right">
+                        <span class="w_song_time">5:10</span>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="ms_release_box">
+                    <div class="w_top_song">
+                        <span class="slider_dot"></span>
+                        <div class="w_tp_song_img">
+                            <img src="/images/weekly/song3.jpg" alt="">
+                            <div class="ms_song_overlay">
+                            </div>
+                            <div class="ms_play_icon">
+                                <img src="/images/svg/play.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="w_tp_song_name">
+                            <h3><a href="#">Dark Alley Acoustic</a></h3>
+                            <p>Ava Cornish</p>
+                        </div>
+                    </div>
+                    <div class="weekly_right">
+                        <span class="w_song_time">5:10</span>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="ms_release_box">
+                    <div class="w_top_song">
+                        <span class="slider_dot"></span>
+                        <div class="w_tp_song_img">
+                            <img src="/images/weekly/song4.jpg" alt="">
+                            <div class="ms_song_overlay">
+                            </div>
+                            <div class="ms_play_icon">
+                                <img src="/images/svg/play.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="w_tp_song_name">
+                            <h3><a href="#">Dark Alley Acoustic</a></h3>
+                            <p>Ava Cornish</p>
+                        </div>
+                    </div>
+                    <div class="weekly_right">
+                        <span class="w_song_time">5:10</span>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="ms_release_box">
+                    <div class="w_top_song">
+                        <span class="slider_dot"></span>
+                        <div class="w_tp_song_img">
+                            <img src="/images/weekly/song5.jpg" alt="">
+                            <div class="ms_song_overlay">
+                            </div>
+                            <div class="ms_play_icon">
+                                <img src="/images/svg/play.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="w_tp_song_name">
+                            <h3><a href="#">Dark Alley Acoustic</a></h3>
+                            <p>Ava Cornish</p>
+                        </div>
+                    </div>
+                    <div class="weekly_right">
+                        <span class="w_song_time">5:10</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Add Arrows -->
+    <div class="swiper-button-next2 slider_nav_next"></div>
+    <div class="swiper-button-prev2 slider_nav_prev"></div>
+</div>
+<div class="ms_fea_album_slider">
+    <div class="ms_heading">
+        <h1>Featured Albums</h1>
+        <span class="veiw_all"><a href="#">Xem thêm</a></span>
+    </div>
+    <div class="ms_album_slider swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="ms_rcnt_box">
+                    <div class="ms_rcnt_box_img">
+                        <img src="/images/album/album1.jpg" alt="">
+                        <div class="ms_main_overlay">
+                            <div class="ms_box_overlay"></div>
+                            <div class="ms_more_icon">
+                                <img src="/images/svg/more.svg" alt="">
+                            </div>
+                            <ul class="more_option">
+                                <li><a href="#"><span class="opt_icon"><span class="icon icon_fav"></span></span>Add To
+                                        Favourites</a></li>
+                                <li><a href="#"><span class="opt_icon"><span class="icon icon_queue"></span></span>Add
+                                        To Queue</a></li>
+                                <li><a href="#"><span class="opt_icon"><span
+                                                class="icon icon_dwn"></span></span>Download Now</a></li>
+                                <li><a href="#"><span class="opt_icon"><span class="icon icon_playlst"></span></span>Add
+                                        To Playlist</a></li>
+                                <li><a href="#"><span class="opt_icon"><span
+                                                class="icon icon_share"></span></span>Share</a></li>
+                            </ul>
+                            <div class="ms_play_icon">
+                                <img src="/images/svg/play.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ms_rcnt_box_text">
+                        <h3><a href="#">Bloodlust</a></h3>
+                        <p>Ava Cornish & Brian Hill</p>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="ms_rcnt_box">
+                    <div class="ms_rcnt_box_img">
+                        <img src="/images/album/album2.jpg" alt="">
+                        <div class="ms_main_overlay">
+                            <div class="ms_box_overlay"></div>
+                            <div class="ms_more_icon">
+                                <img src="/images/svg/more.svg" alt="">
+                            </div>
+                            <ul class="more_option">
+                                <li><a href="#"><span class="opt_icon"><span class="icon icon_fav"></span></span>Add To
+                                        Favourites</a></li>
+                                <li><a href="#"><span class="opt_icon"><span class="icon icon_queue"></span></span>Add
+                                        To Queue</a></li>
+                                <li><a href="#"><span class="opt_icon"><span
+                                                class="icon icon_dwn"></span></span>Download Now</a></li>
+                                <li><a href="#"><span class="opt_icon"><span class="icon icon_playlst"></span></span>Add
+                                        To Playlist</a></li>
+                                <li><a href="#"><span class="opt_icon"><span
+                                                class="icon icon_share"></span></span>Share</a></li>
+                            </ul>
+                            <div class="ms_play_icon">
+                                <img src="/images/svg/play.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ms_rcnt_box_text">
+                        <h3><a href="#">Time flies</a></h3>
+                        <p>Ava Cornish & Brian Hill</p>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="ms_rcnt_box">
+                    <div class="ms_rcnt_box_img">
+                        <img src="/images/album/album3.jpg" alt="">
+                        <div class="ms_main_overlay">
+                            <div class="ms_box_overlay"></div>
+                            <div class="ms_more_icon">
+                                <img src="/images/svg/more.svg" alt="">
+                            </div>
+                            <ul class="more_option">
+                                <li><a href="#"><span class="opt_icon"><span class="icon icon_fav"></span></span>Add To
+                                        Favourites</a></li>
+                                <li><a href="#"><span class="opt_icon"><span class="icon icon_queue"></span></span>Add
+                                        To Queue</a></li>
+                                <li><a href="#"><span class="opt_icon"><span
+                                                class="icon icon_dwn"></span></span>Download Now</a></li>
+                                <li><a href="#"><span class="opt_icon"><span class="icon icon_playlst"></span></span>Add
+                                        To Playlist</a></li>
+                                <li><a href="#"><span class="opt_icon"><span
+                                                class="icon icon_share"></span></span>Share</a></li>
+                            </ul>
+                            <div class="ms_play_icon">
+                                <img src="/images/svg/play.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ms_rcnt_box_text">
+                        <h3><a href="#">Dark matters</a></h3>
+                        <p>Ava Cornish & Brian Hill</p>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="ms_rcnt_box">
+                    <div class="ms_rcnt_box_img">
+                        <img src="/images/album/album4.jpg" alt="">
+                        <div class="ms_main_overlay">
+                            <div class="ms_box_overlay"></div>
+                            <div class="ms_more_icon">
+                                <img src="/images/svg/more.svg" alt="">
+                            </div>
+                            <ul class="more_option">
+                                <li><a href="#"><span class="opt_icon"><span class="icon icon_fav"></span></span>Add To
+                                        Favourites</a></li>
+                                <li><a href="#"><span class="opt_icon"><span class="icon icon_queue"></span></span>Add
+                                        To Queue</a></li>
+                                <li><a href="#"><span class="opt_icon"><span
+                                                class="icon icon_dwn"></span></span>Download Now</a></li>
+                                <li><a href="#"><span class="opt_icon"><span class="icon icon_playlst"></span></span>Add
+                                        To Playlist</a></li>
+                                <li><a href="#"><span class="opt_icon"><span
+                                                class="icon icon_share"></span></span>Share</a></li>
+                            </ul>
+                            <div class="ms_play_icon">
+                                <img src="/images/svg/play.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ms_rcnt_box_text">
+                        <h3><a href="#">Eye to eye</a></h3>
+                        <p>Ava Cornish & Brian Hill</p>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="ms_rcnt_box">
+                    <div class="ms_rcnt_box_img">
+                        <img src="/images/album/album5.jpg" alt="">
+                        <div class="ms_main_overlay">
+                            <div class="ms_box_overlay"></div>
+                            <div class="ms_more_icon">
+                                <img src="/images/svg/more.svg" alt="">
+                            </div>
+                            <ul class="more_option">
+                                <li><a href="#"><span class="opt_icon"><span class="icon icon_fav"></span></span>Add To
+                                        Favourites</a></li>
+                                <li><a href="#"><span class="opt_icon"><span class="icon icon_queue"></span></span>Add
+                                        To Queue</a></li>
+                                <li><a href="#"><span class="opt_icon"><span
+                                                class="icon icon_dwn"></span></span>Download Now</a></li>
+                                <li><a href="#"><span class="opt_icon"><span class="icon icon_playlst"></span></span>Add
+                                        To Playlist</a></li>
+                                <li><a href="#"><span class="opt_icon"><span
+                                                class="icon icon_share"></span></span>Share</a></li>
+                            </ul>
+                            <div class="ms_play_icon">
+                                <img src="/images/svg/play.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ms_rcnt_box_text">
+                        <h3><a href="#">Cloud nine</a></h3>
+                        <p>Ava Cornish & Brian Hill</p>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="ms_rcnt_box">
+                    <div class="ms_rcnt_box_img">
+                        <img src="/images/album/album6.jpg" alt="">
+                        <div class="ms_main_overlay">
+                            <div class="ms_box_overlay"></div>
+                            <div class="ms_more_icon">
+                                <img src="/images/svg/more.svg" alt="">
+                            </div>
+                            <ul class="more_option">
+                                <li><a href="#"><span class="opt_icon"><span class="icon icon_fav"></span></span>Add To
+                                        Favourites</a></li>
+                                <li><a href="#"><span class="opt_icon"><span class="icon icon_queue"></span></span>Add
+                                        To Queue</a></li>
+                                <li><a href="#"><span class="opt_icon"><span
+                                                class="icon icon_dwn"></span></span>Download Now</a></li>
+                                <li><a href="#"><span class="opt_icon"><span class="icon icon_playlst"></span></span>Add
+                                        To Playlist</a></li>
+                                <li><a href="#"><span class="opt_icon"><span
+                                                class="icon icon_share"></span></span>Share</a></li>
+                            </ul>
+                            <div class="ms_play_icon">
+                                <img src="/images/svg/play.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ms_rcnt_box_text">
+                        <h3><a href="#">Cobweb of lies</a></h3>
+                        <p>Ava Cornish & Brian Hill</p>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="ms_rcnt_box">
+                    <div class="ms_rcnt_box_img">
+                        <img src="/images/album/album1.jpg" alt="">
+                        <div class="ms_main_overlay">
+                            <div class="ms_box_overlay"></div>
+                            <div class="ms_more_icon">
+                                <img src="/images/svg/more.svg" alt="">
+                            </div>
+                            <ul class="more_option">
+                                <li><a href="#"><span class="opt_icon"><span class="icon icon_fav"></span></span>Add To
+                                        Favourites</a></li>
+                                <li><a href="#"><span class="opt_icon"><span class="icon icon_queue"></span></span>Add
+                                        To Queue</a></li>
+                                <li><a href="#"><span class="opt_icon"><span
+                                                class="icon icon_dwn"></span></span>Download Now</a></li>
+                                <li><a href="#"><span class="opt_icon"><span class="icon icon_playlst"></span></span>Add
+                                        To Playlist</a></li>
+                                <li><a href="#"><span class="opt_icon"><span
+                                                class="icon icon_share"></span></span>Share</a></li>
+                            </ul>
+                            <div class="ms_play_icon">
+                                <img src="/images/svg/play.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ms_rcnt_box_text">
+                        <h3><a href="#">Bloodlust</a></h3>
+                        <p>Ava Cornish & Brian Hill</p>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="ms_rcnt_box">
+                    <div class="ms_rcnt_box_img">
+                        <img src="/images/album/album2.jpg" alt="">
+                        <div class="ms_main_overlay">
+                            <div class="ms_box_overlay"></div>
+                            <div class="ms_more_icon">
+                                <img src="/images/svg/more.svg" alt="">
+                            </div>
+                            <ul class="more_option">
+                                <li><a href="#"><span class="opt_icon"><span class="icon icon_fav"></span></span>Add To
+                                        Favourites</a></li>
+                                <li><a href="#"><span class="opt_icon"><span class="icon icon_queue"></span></span>Add
+                                        To Queue</a></li>
+                                <li><a href="#"><span class="opt_icon"><span
+                                                class="icon icon_dwn"></span></span>Download Now</a></li>
+                                <li><a href="#"><span class="opt_icon"><span class="icon icon_playlst"></span></span>Add
+                                        To Playlist</a></li>
+                                <li><a href="#"><span class="opt_icon"><span
+                                                class="icon icon_share"></span></span>Share</a></li>
+                            </ul>
+                            <div class="ms_play_icon">
+                                <img src="/images/svg/play.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ms_rcnt_box_text">
+                        <h3><a href="#">Time flies</a></h3>
+                        <p>Ava Cornish & Brian Hill</p>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="ms_rcnt_box">
+                    <div class="ms_rcnt_box_img">
+                        <img src="/images/album/album3.jpg" alt="">
+                        <div class="ms_main_overlay">
+                            <div class="ms_box_overlay"></div>
+                            <div class="ms_more_icon">
+                                <img src="/images/svg/more.svg" alt="">
+                            </div>
+                            <ul class="more_option">
+                                <li><a href="#"><span class="opt_icon"><span class="icon icon_fav"></span></span>Add To
+                                        Favourites</a></li>
+                                <li><a href="#"><span class="opt_icon"><span class="icon icon_queue"></span></span>Add
+                                        To Queue</a></li>
+                                <li><a href="#"><span class="opt_icon"><span
+                                                class="icon icon_dwn"></span></span>Download Now</a></li>
+                                <li><a href="#"><span class="opt_icon"><span class="icon icon_playlst"></span></span>Add
+                                        To Playlist</a></li>
+                                <li><a href="#"><span class="opt_icon"><span
+                                                class="icon icon_share"></span></span>Share</a></li>
+                            </ul>
+                            <div class="ms_play_icon">
+                                <img src="/images/svg/play.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ms_rcnt_box_text">
+                        <h3><a href="#">Dark matters</a></h3>
+                        <p>Ava Cornish & Brian Hill</p>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="ms_rcnt_box">
+                    <div class="ms_rcnt_box_img">
+                        <img src="/images/album/album4.jpg" alt="">
+                        <div class="ms_main_overlay">
+                            <div class="ms_box_overlay"></div>
+                            <div class="ms_more_icon">
+                                <img src="/images/svg/more.svg" alt="">
+                            </div>
+                            <ul class="more_option">
+                                <li><a href="#"><span class="opt_icon"><span class="icon icon_fav"></span></span>Add To
+                                        Favourites</a></li>
+                                <li><a href="#"><span class="opt_icon"><span class="icon icon_queue"></span></span>Add
+                                        To Queue</a></li>
+                                <li><a href="#"><span class="opt_icon"><span
+                                                class="icon icon_dwn"></span></span>Download Now</a></li>
+                                <li><a href="#"><span class="opt_icon"><span class="icon icon_playlst"></span></span>Add
+                                        To Playlist</a></li>
+                                <li><a href="#"><span class="opt_icon"><span
+                                                class="icon icon_share"></span></span>Share</a></li>
+                            </ul>
+                            <div class="ms_play_icon">
+                                <img src="/images/svg/play.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ms_rcnt_box_text">
+                        <h3><a href="#">Eye to eye</a></h3>
+                        <p>Ava Cornish & Brian Hill</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Add Arrows -->
+    <div class="swiper-button-next3 slider_nav_next"></div>
+    <div class="swiper-button-prev3 slider_nav_prev"></div>
+</div>
+<div class="ms_genres_wrapper">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="ms_heading">
+                <h1>Top Genres</h1>
+                <span class="veiw_all"><a href="#">Xem thêm</a></span>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="ms_genres_box">
+                <img src="/images/genrs/img1.jpg" alt="" class="img-fluid" />
+                <div class="ms_main_overlay">
+                    <div class="ms_box_overlay"></div>
+                    <div class="ms_play_icon">
+                        <img src="/images/svg/play.svg" alt="">
+                    </div>
+                    <div class="ovrly_text_div">
+                        <span class="ovrly_text1"><a href="#">romantic</a></span>
+                        <span class="ovrly_text2"><a href="#">view song</a></span>
+                    </div>
+                </div>
+                <div class="ms_box_overlay_on">
+                    <div class="ovrly_text_div">
+                        <span class="ovrly_text1"><a href="#">romantic</a></span>
+                        <span class="ovrly_text2"><a href="#">view song</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="ms_genres_box">
+                        <img src="/images/genrs/img2.jpg" alt="" class="img-fluid" />
+                        <div class="ms_main_overlay">
+                            <div class="ms_box_overlay"></div>
+                            <div class="ms_play_icon">
+                                <img src="/images/svg/play.svg" alt="">
+                            </div>
+                            <div class="ovrly_text_div">
+                                <span class="ovrly_text1"><a href="#">Classical</a></span>
+                            </div>
+                        </div>
+                        <div class="ms_box_overlay_on">
+                            <div class="ovrly_text_div">
+                                <span class="ovrly_text1"><a href="#">Classical</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="ms_genres_box">
+                        <img src="/images/genrs/img3.jpg" alt="" class="img-fluid" />
+                        <div class="ms_main_overlay">
+                            <div class="ms_box_overlay"></div>
+                            <div class="ms_play_icon">
+                                <img src="/images/svg/play.svg" alt="">
+                            </div>
+                            <div class="ovrly_text_div">
+                                <span class="ovrly_text1"><a href="#">hip hop</a></span>
+                            </div>
+                        </div>
+                        <div class="ms_box_overlay_on">
+                            <div class="ovrly_text_div">
+                                <span class="ovrly_text1"><a href="#">hip hop</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="ms_genres_box">
+                        <img src="/images/genrs/img5.jpg" alt="" class="img-fluid" />
+                        <div class="ms_main_overlay">
+                            <div class="ms_box_overlay"></div>
+                            <div class="ms_play_icon">
+                                <img src="/images/svg/play.svg" alt="">
+                            </div>
+                            <div class="ovrly_text_div">
+                                <span class="ovrly_text1"><a href="#">dancing</a></span>
+                            </div>
+                        </div>
+                        <div class="ms_box_overlay_on">
+                            <div class="ovrly_text_div">
+                                <span class="ovrly_text1"><a href="#">dancing</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="ms_genres_box">
+                        <img src="/images/genrs/img6.jpg" alt="" class="img-fluid" />
+                        <div class="ms_main_overlay">
+                            <div class="ms_box_overlay"></div>
+                            <div class="ms_play_icon">
+                                <img src="/images/svg/play.svg" alt="">
+                            </div>
+                            <div class="ovrly_text_div">
+                                <span class="ovrly_text1"><a href="#">EDM</a></span>
+                            </div>
+                        </div>
+                        <div class="ms_box_overlay_on">
+                            <div class="ovrly_text_div">
+                                <span class="ovrly_text1"><a href="#">EDM</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-2">
+            <div class="ms_genres_box">
+                <img src="/images/genrs/img4.jpg" alt="" class="img-fluid" />
+                <div class="ms_main_overlay">
+                    <div class="ms_box_overlay"></div>
+                    <div class="ms_play_icon">
+                        <img src="/images/svg/play.svg" alt="">
+                    </div>
+                    <div class="ovrly_text_div">
+                        <span class="ovrly_text1"><a href="#">rock</a></span>
+                    </div>
+                </div>
+                <div class="ms_box_overlay_on">
+                    <div class="ovrly_text_div">
+                        <span class="ovrly_text1"><a href="#">rock</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="ms_advr_wrapper ms_advr2">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <a href="#"><img src="/images/adv1.jpg" alt="" class="img-fluid" /></a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="ms_radio_wrapper">
+    <div class="ms_heading">
+        <h1>Live Radio</h1>
+        <span class="veiw_all"><a href="#">Xem thêm</a></span>
+    </div>
+    <div class="ms_radio_slider swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="ms_rcnt_box">
+                    <div class="ms_rcnt_box_img">
+                        <img src="/images/radio/img1.jpg" alt="">
+                        <div class="ms_main_overlay">
+                            <div class="ms_box_overlay"></div>
+                            <div class="ms_more_icon">
+                                <img src="/images/svg/more.svg" alt="">
+                            </div>
+                            <ul class="more_option">
+                                <li><a href="#"><span class="opt_icon"><span class="icon icon_fav"></span></span>Add To
+                                        Favourites</a></li>
+                                <li><a href="#"><span class="opt_icon"><span class="icon icon_queue"></span></span>Add
+                                        To Queue</a></li>
+                                <li><a href="#"><span class="opt_icon"><span
+                                                class="icon icon_dwn"></span></span>Download Now</a></li>
+                                <li><a href="#"><span class="opt_icon"><span class="icon icon_playlst"></span></span>Add
+                                        To Playlist</a></li>
+                                <li><a href="#"><span class="opt_icon"><span
+                                                class="icon icon_share"></span></span>Share</a></li>
+                            </ul>
+                            <div class="ms_play_icon">
+                                <img src="/images/svg/play.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ms_rcnt_box_text">
+                        <h3><a href="#">Top Trendings</a></h3>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="ms_rcnt_box">
+                    <div class="ms_rcnt_box_img">
+                        <img src="/images/radio/img2.jpg" alt="">
+                        <div class="ms_main_overlay">
+                            <div class="ms_box_overlay"></div>
+                            <div class="ms_more_icon">
+                                <img src="/images/svg/more.svg" alt="">
+                            </div>
+                            <ul class="more_option">
+                                <li><a href="#"><span class="opt_icon"><span class="icon icon_fav"></span></span>Add To
+                                        Favourites</a></li>
+                                <li><a href="#"><span class="opt_icon"><span class="icon icon_queue"></span></span>Add
+                                        To Queue</a></li>
+                                <li><a href="#"><span class="opt_icon"><span
+                                                class="icon icon_dwn"></span></span>Download Now</a></li>
+                                <li><a href="#"><span class="opt_icon"><span class="icon icon_playlst"></span></span>Add
+                                        To Playlist</a></li>
+                                <li><a href="#"><span class="opt_icon"><span
+                                                class="icon icon_share"></span></span>Share</a></li>
+                            </ul>
+                            <div class="ms_play_icon">
+                                <img src="/images/svg/play.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ms_rcnt_box_text">
+                        <h3><a href="#">New Romantic Charts</a></h3>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="ms_rcnt_box">
+                    <div class="ms_rcnt_box_img">
+                        <img src="/images/radio/img3.jpg" alt="">
+                        <div class="ms_main_overlay">
+                            <div class="ms_box_overlay"></div>
+                            <div class="ms_more_icon">
+                                <img src="/images/svg/more.svg" alt="">
+                            </div>
+                            <ul class="more_option">
+                                <li><a href="#"><span class="opt_icon"><span class="icon icon_fav"></span></span>Add To
+                                        Favourites</a></li>
+                                <li><a href="#"><span class="opt_icon"><span class="icon icon_queue"></span></span>Add
+                                        To Queue</a></li>
+                                <li><a href="#"><span class="opt_icon"><span
+                                                class="icon icon_dwn"></span></span>Download Now</a></li>
+                                <li><a href="#"><span class="opt_icon"><span class="icon icon_playlst"></span></span>Add
+                                        To Playlist</a></li>
+                                <li><a href="#"><span class="opt_icon"><span
+                                                class="icon icon_share"></span></span>Share</a></li>
+                            </ul>
+                            <div class="ms_play_icon">
+                                <img src="/images/svg/play.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ms_rcnt_box_text">
+                        <h3><a href="#">Dance Beats - Hip Hops</a></h3>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="ms_rcnt_box">
+                    <div class="ms_rcnt_box_img">
+                        <img src="/images/radio/img4.jpg" alt="">
+                        <div class="ms_main_overlay">
+                            <div class="ms_box_overlay"></div>
+                            <div class="ms_more_icon">
+                                <img src="/images/svg/more.svg" alt="">
+                            </div>
+                            <ul class="more_option">
+                                <li><a href="#"><span class="opt_icon"><span class="icon icon_fav"></span></span>Add To
+                                        Favourites</a></li>
+                                <li><a href="#"><span class="opt_icon"><span class="icon icon_queue"></span></span>Add
+                                        To Queue</a></li>
+                                <li><a href="#"><span class="opt_icon"><span
+                                                class="icon icon_dwn"></span></span>Download Now</a></li>
+                                <li><a href="#"><span class="opt_icon"><span class="icon icon_playlst"></span></span>Add
+                                        To Playlist</a></li>
+                                <li><a href="#"><span class="opt_icon"><span
+                                                class="icon icon_share"></span></span>Share</a></li>
+                            </ul>
+                            <div class="ms_play_icon">
+                                <img src="/images/svg/play.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ms_rcnt_box_text">
+                        <h3><a href="#">Workout Time</a></h3>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="ms_rcnt_box">
+                    <div class="ms_rcnt_box_img">
+                        <img src="/images/radio/img5.jpg" alt="">
+                        <div class="ms_main_overlay">
+                            <div class="ms_box_overlay"></div>
+                            <div class="ms_more_icon">
+                                <img src="/images/svg/more.svg" alt="">
+                            </div>
+                            <ul class="more_option">
+                                <li><a href="#"><span class="opt_icon"><span class="icon icon_fav"></span></span>Add To
+                                        Favourites</a></li>
+                                <li><a href="#"><span class="opt_icon"><span class="icon icon_queue"></span></span>Add
+                                        To Queue</a></li>
+                                <li><a href="#"><span class="opt_icon"><span
+                                                class="icon icon_dwn"></span></span>Download Now</a></li>
+                                <li><a href="#"><span class="opt_icon"><span class="icon icon_playlst"></span></span>Add
+                                        To Playlist</a></li>
+                                <li><a href="#"><span class="opt_icon"><span
+                                                class="icon icon_share"></span></span>Share</a></li>
+                            </ul>
+                            <div class="ms_play_icon">
+                                <img src="/images/svg/play.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ms_rcnt_box_text">
+                        <h3><a href="#">Best Classics Of All Time</a></h3>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="ms_rcnt_box">
+                    <div class="ms_rcnt_box_img">
+                        <img src="/images/radio/img6.jpg" alt="">
+                        <div class="ms_main_overlay">
+                            <div class="ms_box_overlay"></div>
+                            <div class="ms_more_icon">
+                                <img src="/images/svg/more.svg" alt="">
+                            </div>
+                            <ul class="more_option">
+                                <li><a href="#"><span class="opt_icon"><span class="icon icon_fav"></span></span>Add To
+                                        Favourites</a></li>
+                                <li><a href="#"><span class="opt_icon"><span class="icon icon_queue"></span></span>Add
+                                        To Queue</a></li>
+                                <li><a href="#"><span class="opt_icon"><span
+                                                class="icon icon_dwn"></span></span>Download Now</a></li>
+                                <li><a href="#"><span class="opt_icon"><span class="icon icon_playlst"></span></span>Add
+                                        To Playlist</a></li>
+                                <li><a href="#"><span class="opt_icon"><span
+                                                class="icon icon_share"></span></span>Share</a></li>
+                            </ul>
+                            <div class="ms_play_icon">
+                                <img src="/images/svg/play.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ms_rcnt_box_text">
+                        <h3><a href="#">Heart Broken - Soul Music</a></h3>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="ms_rcnt_box">
+                    <div class="ms_rcnt_box_img">
+                        <img src="/images/radio/img1.jpg" alt="">
+                        <div class="ms_main_overlay">
+                            <div class="ms_box_overlay"></div>
+                            <div class="ms_more_icon">
+                                <img src="/images/svg/more.svg" alt="">
+                            </div>
+                            <ul class="more_option">
+                                <li><a href="#"><span class="opt_icon"><span class="icon icon_fav"></span></span>Add To
+                                        Favourites</a></li>
+                                <li><a href="#"><span class="opt_icon"><span class="icon icon_queue"></span></span>Add
+                                        To Queue</a></li>
+                                <li><a href="#"><span class="opt_icon"><span
+                                                class="icon icon_dwn"></span></span>Download Now</a></li>
+                                <li><a href="#"><span class="opt_icon"><span class="icon icon_playlst"></span></span>Add
+                                        To Playlist</a></li>
+                                <li><a href="#"><span class="opt_icon"><span
+                                                class="icon icon_share"></span></span>Share</a></li>
+                            </ul>
+                            <div class="ms_play_icon">
+                                <img src="/images/svg/play.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ms_rcnt_box_text">
+                        <h3><a href="#">Dream Your Moments (Duet)</a></h3>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="ms_rcnt_box">
+                    <div class="ms_rcnt_box_img">
+                        <img src="/images/radio/img2.jpg" alt="">
+                        <div class="ms_main_overlay">
+                            <div class="ms_box_overlay"></div>
+                            <div class="ms_more_icon">
+                                <img src="/images/svg/more.svg" alt="">
+                            </div>
+                            <ul class="more_option">
+                                <li><a href="#"><span class="opt_icon"><span class="icon icon_fav"></span></span>Add To
+                                        Favourites</a></li>
+                                <li><a href="#"><span class="opt_icon"><span class="icon icon_queue"></span></span>Add
+                                        To Queue</a></li>
+                                <li><a href="#"><span class="opt_icon"><span
+                                                class="icon icon_dwn"></span></span>Download Now</a></li>
+                                <li><a href="#"><span class="opt_icon"><span class="icon icon_playlst"></span></span>Add
+                                        To Playlist</a></li>
+                                <li><a href="#"><span class="opt_icon"><span
+                                                class="icon icon_share"></span></span>Share</a></li>
+                            </ul>
+                            <div class="ms_play_icon">
+                                <img src="/images/svg/play.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ms_rcnt_box_text">
+                        <h3><a href="#">Until I Met You</a></h3>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="ms_rcnt_box">
+                    <div class="ms_rcnt_box_img">
+                        <img src="/images/radio/img3.jpg" alt="">
+                        <div class="ms_main_overlay">
+                            <div class="ms_box_overlay"></div>
+                            <div class="ms_more_icon">
+                                <img src="/images/svg/more.svg" alt="">
+                            </div>
+                            <ul class="more_option">
+                                <li><a href="#"><span class="opt_icon"><span class="icon icon_fav"></span></span>Add To
+                                        Favourites</a></li>
+                                <li><a href="#"><span class="opt_icon"><span class="icon icon_queue"></span></span>Add
+                                        To Queue</a></li>
+                                <li><a href="#"><span class="opt_icon"><span
+                                                class="icon icon_dwn"></span></span>Download Now</a></li>
+                                <li><a href="#"><span class="opt_icon"><span class="icon icon_playlst"></span></span>Add
+                                        To Playlist</a></li>
+                                <li><a href="#"><span class="opt_icon"><span
+                                                class="icon icon_share"></span></span>Share</a></li>
+                            </ul>
+                            <div class="ms_play_icon">
+                                <img src="/images/svg/play.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ms_rcnt_box_text">
+                        <h3><a href="#">Gimme Some Courage</a></h3>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="ms_rcnt_box">
+                    <div class="ms_rcnt_box_img">
+                        <img src="/images/radio/img4.jpg" alt="">
+                        <div class="ms_main_overlay">
+                            <div class="ms_box_overlay"></div>
+                            <div class="ms_more_icon">
+                                <img src="/images/svg/more.svg" alt="">
+                            </div>
+                            <ul class="more_option">
+                                <li><a href="#"><span class="opt_icon"><span class="icon icon_fav"></span></span>Add To
+                                        Favourites</a></li>
+                                <li><a href="#"><span class="opt_icon"><span class="icon icon_queue"></span></span>Add
+                                        To Queue</a></li>
+                                <li><a href="#"><span class="opt_icon"><span
+                                                class="icon icon_dwn"></span></span>Download Now</a></li>
+                                <li><a href="#"><span class="opt_icon"><span class="icon icon_playlst"></span></span>Add
+                                        To Playlist</a></li>
+                                <li><a href="#"><span class="opt_icon"><span
+                                                class="icon icon_share"></span></span>Share</a></li>
+                            </ul>
+                            <div class="ms_play_icon">
+                                <img src="/images/svg/play.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ms_rcnt_box_text">
+                        <h3><a href="#">Dark Alley Acoustic</a></h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Add Arrows -->
+    <div class="swiper-button-next4 slider_nav_next"></div>
+    <div class="swiper-button-prev4 slider_nav_prev"></div>
+</div>
+@section Scripts
+{
+    <script>
+        var arr = JSON.parse('@Html.Raw(Json.Serialize(Model.newsOrder))');
+        var music_list = [];
+        
+
+        $(function() {
+            "use strict";
+            if ($(".audio-player").length) {
+                for(let i = 0; i < arr.length; i++){
+                    music_list[i] = {
+                        image: urldecode(arr[i].image),
+                        title: arr[i].name,
+                        artist: arr[i].artist,
+                        mp3: urldecode(arr[i].music1),
+                        option: '<ul class="more_option"><li><a href="#"><span class="opt_icon" title="Add To Favourites"><span class="icon icon_fav"></span></span></a></li><li><a href="#"><span class="opt_icon" title="Add To Queue"><span class="icon icon_queue"></span></span></a></li><li><a href="'+urldecode(arr[i].music1)+'" download><span class="opt_icon" title="Download Now"><span class="icon icon_dwn"></span></span></a></li><li><a href="#"><span class="opt_icon" title="Add To Playlist"><span class="icon icon_playlst"></span></span></a></li><li><a href="#"><span class="opt_icon" title="Share"><span class="icon icon_share"></span></span></a></li></ul>',
+                    };
+                }
+                console.log(music_list)
+                var myPlaylist = new jPlayerPlaylist({
+                    jPlayer: "#jquery_jplayer_1",
+                    cssSelectorAncestor: "#jp_container_1",
+                }, music_list, {
+                    swfPath: "js/plugins",
+                    supplied: "oga, mp3",
+                    wmode: "window",
+                    useStateClassSkin: true,
+                    autoBlur: false,
+                    smoothPlayBar: true,
+                    keyEnabled: true,
+                    playlistOptions: {
+                        autoPlay: false,
+                    },
+                });
+                $("#jquery_jplayer_1").on($.jPlayer.event.ready + " " + $.jPlayer.event.play, function(event) {
+                    var current = myPlaylist.current;
+                    var playlist = myPlaylist.playlist;
+                    $.each(playlist, function(index, obj) {
+                        if (index == current) {
+                            $(".jp-now-playing").html("<div class='jp-track-name'><span class='que_img'><img src='" + obj.image + "'></span><div class='que_data'>" + obj.title + " <div class='jp-artist-name'>" + obj.artist + "</div></div></div>");
+                        }
+                    });
+                    $(".knob-wrapper")
+                        .mousedown(function() {
+                            $(window).mousemove(function(e) {
+                                var angle1 = getRotationDegrees($(".knob")),
+                                    volume = angle1 / 270;
+
+                                if (volume > 1) {
+                                    $("#jquery_jplayer_1").jPlayer("volume", 1);
+                                } else if (volume <= 0) {
+                                    $("#jquery_jplayer_1").jPlayer("mute");
+                                } else {
+                                    $("#jquery_jplayer_1").jPlayer("volume", volume);
+                                    $("#jquery_jplayer_1").jPlayer("unmute");
+                                }
+                            });
+
+                            return false;
+                        })
+                        .mouseup(function() {
+                            $(window).unbind("mousemove");
+                        });
+
+                    function getRotationDegrees(obj) {
+                        var matrix = obj.css("-webkit-transform") || obj.css("-moz-transform") || obj.css("-ms-transform") || obj.css("-o-transform") || obj.css("transform");
+                        if (matrix !== "none") {
+                            var values = matrix.split("(")[1].split(")")[0].split(",");
+                            var a = values[0];
+                            var b = values[1];
+                            var angle = Math.round(Math.atan2(b, a) * (180 / Math.PI));
+                        } else {
+                            var angle = 0;
+                        }
+                        return angle < 0 ? angle + 360 : angle;
+                    }
+
+                    var timeDrag = false;
+                    $(".jp-play-bar").mousedown(function(e) {
+                        timeDrag = true;
+                        updatebar(e.pageX);
+                    });
+                    $(document).mouseup(function(e) {
+                        if (timeDrag) {
+                            timeDrag = false;
+                            updatebar(e.pageX);
+                        }
+                    });
+                    $(document).mousemove(function(e) {
+                        if (timeDrag) {
+                            updatebar(e.pageX);
+                        }
+                    });
+                    var updatebar = function(x) {
+                        var progress = $(".jp-progress");
+                        var position = x - progress.offset().left;
+                        var percentage = (100 * position) / progress.width();
+                        if (percentage > 100) {
+                            percentage = 100;
+                        }
+                        if (percentage < 0) {
+                            percentage = 0;
+                        }
+                        $("#jquery_jplayer_1").jPlayer("playHead", percentage);
+                        $(".jp-play-bar").css("width", percentage + "%");
+                    };
+                    $("#playlist-toggle, #playlist-text, #playlist-wrap li a")
+                        .unbind()
+                        .on("click", function() {
+                            $("#playlist-wrap").fadeToggle();
+                            $("#playlist-toggle, #playlist-text").toggleClass("playlist-is-visible");
+                        });
+                    $(".hide_player")
+                        .unbind()
+                        .on("click", function() {
+                            $(".audio-player").toggleClass("is_hidden");
+                            $(this).html($(this).html() == '<i class="fa fa-angle-down"></i> HIDE' ? '<i class="fa fa-angle-up"></i> SHOW PLAYER' : '<i class="fa fa-angle-down"></i> HIDE');
+                        });
+                    $("body")
+                        .unbind()
+                        .on("click", ".audio-play-btn", function() {
+                            $(".audio-play-btn").removeClass("is_playing");
+                            $(this).addClass("is_playing");
+                            var playlistId = $(this).data("playlist-id");
+                            myPlaylist.play(playlistId);
+                        });
+                });
+            }
+        });
+        function urldecode(str) {
+            return decodeURIComponent((str+'').replace(/\+/g, '%20'));
+        }
+    </script> 
+}
